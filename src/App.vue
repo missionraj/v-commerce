@@ -1,15 +1,18 @@
 <template>
   <Header />
-  <router-view/>
+  <router-view />
+  <Footer />
 </template>
 
 <script>
 
 import Header from './components/header.vue';
+import Footer from './components/Footer.vue';
 
 export default {
   components : {
-    Header
+    Header,
+    Footer
   }
 }
 </script>
@@ -46,6 +49,8 @@ html {
 
 body {
   margin: 0;
+  font-family: 'Roboto', sans-serif;
+  
 }
 
 /**

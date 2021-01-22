@@ -14,7 +14,6 @@ export default {
     props:['data'],
     setup(props){
         const { data }  =  toRefs(props);
-
         return { 
             data
         }
@@ -27,7 +26,6 @@ export default {
     .card {
         background: #fff;
         border-radius: 2px;
-        display: inline-block;
         margin: 1rem;
         position: relative;
         width: 300px;
