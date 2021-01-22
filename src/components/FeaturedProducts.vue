@@ -36,7 +36,7 @@ export default {
                 img:require('@/assets/images/featured_watch.jpg')
             }
         ])
-        
+
         return { 
             products
         }
@@ -50,5 +50,6 @@ export default {
         display: flex;
         align-items: center;
         justify-content: space-evenly;
+        flex-wrap: wrap;
     }
 </style>

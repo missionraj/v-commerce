@@ -65,6 +65,7 @@ setup (props) {
         margin-left: auto;
         margin-right: auto;
         padding: 1em;
+        flex-direction: column-reverse;
     }
     img { 
         height: 400px;
@@ -72,4 +73,19 @@ setup (props) {
         object-fit: contain;
     }
 
+    @media only screen and (max-width: 768px) {
+        .container { 
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            background: #efefef;
+            padding: 1em;
+        }
+        img { 
+            height: 300px;
+            width: 100%;
+            object-fit: contain;
+        }
+    }
 </style>
