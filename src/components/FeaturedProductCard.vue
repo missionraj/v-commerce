@@ -1,21 +1,33 @@
 <template>
-    <div class="card"> 
+
+    <div class="card" @click="navigateToProductDetail"> 
         <img :src="details.img" >
         <div> {{ details.price }} </div>
         <div class="title"> {{ details.title }} </div> 
         <p> {{ details.description }} </p>
     </div>
+
 </template>
 
 <script>
 import { toRefs } from 'vue'
+
+import { useRouter } from 'vue-router'
+
 export default {
     props:['details'],
     setup(props) { 
         const { details } =  toRefs(props)
     
+        const router = useRouter()
+
+        const navigateToProductDetail = () => {
+            router.push({ name: 'Product', params: { id : details.value.id }}) 
+        }
+
         return {
-            details
+            details,
+            navigateToProductDetail
         }
     }
 }

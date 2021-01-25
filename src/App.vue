@@ -24,7 +24,10 @@ export default {
 .text-center { 
   text-align: center;
 }
-
+.bg-light-grey { 
+  background: #e9eef5;
+}
+        
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
 /* Document

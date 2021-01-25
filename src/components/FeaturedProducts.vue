@@ -51,5 +51,6 @@ export default {
         align-items: center;
         justify-content: space-evenly;
         flex-wrap: wrap;
+        padding: 1rem 0;
     }
 </style>
