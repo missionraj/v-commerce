@@ -30,7 +30,7 @@
     <section >
         <div class="RelatedProducts__container">
             <h2> Related Products </h2>
-            <Carousel :value="relatedProducts" :numVisible="3" :numScroll="1" >
+            <Carousel :value="relatedProducts" :numVisible="3" :numScroll="1" :responsiveOptions="responsiveOptions">
                 <template #item="slotProps" > 
                     <FeaturedProductCard :details="slotProps.data" />
                 </template>
@@ -40,7 +40,7 @@
 </template>
 
 <script>
-import { toRefs, ref } from 'vue'
+import { toRefs, ref, onMounted, onUnmounted } from 'vue'
 
 import Carousel from 'primevue/carousel'
 
@@ -51,6 +51,14 @@ export default {
     components : { Carousel, FeaturedProductCard },
     setup(props){
         const { id } =  toRefs(props)
+        const responsiveOptions = ref([
+                    {
+                        breakpoint: '768px',
+                        numVisible: 1,
+                        numScroll: 1
+                    }
+            ]
+        ) 
         const relatedProducts = ref([
             {
                 id:1,
@@ -104,7 +112,8 @@ export default {
         ])
         return { 
             id,
-            relatedProducts
+            relatedProducts,
+            responsiveOptions
         }
     }
 }
